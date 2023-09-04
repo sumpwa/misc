@@ -6,7 +6,9 @@ If both say fizzbuzz
 Otherwise say your number
 */
 #include <iostream>
-using namespace std;
+
+using std::cout;
+using std::cin;
 
 int main(){
     int FIZZARG = 3;

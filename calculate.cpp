@@ -6,10 +6,11 @@ This function takes two inputs, finds every even number, and adds them all toget
 #include <iostream>
 #include <ranges>
 #include <numeric>
-#include <cstdint>
 
-using namespace std;
-namespace rv = views;
+using std::cout;
+using std::cin;
+using std::accumulate;
+namespace rv = std::views;
 
 int calculate(int first, int last) {
     if (last >= first){
@@ -33,7 +34,7 @@ int main() {
     cout << "Enter the second in the range: \n";
     cin >> in2 ;
     
-    uint64_t result = calculate(in1, in2);
+    int result = calculate(in1, in2);
     cout << "Result: \n" << result;
     
     return 0;

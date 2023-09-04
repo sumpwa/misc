@@ -4,7 +4,12 @@
 #include <iomanip>
 #include <string>
 
-using namespace std;
+using std::cout;
+using std::cin;
+using std::endl;
+using std::string;
+using std::fixed;
+using std::setprecision;
 
 string leftpad(string str, int len, char ch = ' ') {
     if (ch == 0) ch = ' '; // Using space as default padding character
@@ -69,12 +74,12 @@ int main(){
 
     result = Q_rsqrt(number);
 
-    cout << std::fixed;
-    cout << std::setprecision(12);
+    cout << fixed;
+    cout << setprecision(12);
     cout << "\n\nFinal result: " << result;
     float SquareRoot = 1/sqrtf(number);
-    cout << std::fixed;
-    cout << std::setprecision(12);
+    cout << fixed;
+    cout << setprecision(12);
     cout << "\nCompared to standard C inverse square root function: " << SquareRoot;
 
     cout << "\n\nWhat to do next...";
@@ -117,8 +122,8 @@ while (fibiter >= count)
     
     }
 
-    cout << std::fixed;
-    cout << std::setprecision(12);
+    cout << fixed;
+    cout << setprecision(12);
     cout << endl << "Euler's Number: " << euler;
     cout << endl << "Press any key to continue..." << endl;
     system("read");
