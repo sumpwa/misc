@@ -8,13 +8,15 @@ This function takes two inputs, finds every even number, and adds them all toget
 #include <numeric>
 #include <cstdint>
 
-namespace rv = std::views;
+using namespace std;
+namespace rv = views;
+
 int calculate(int first, int last) {
     if (last >= first){
         auto even = [](auto e) { return e % 2 == 0; };
         auto evens = rv::iota(first, last + 1)
                    | rv::filter(even);
-        return std::accumulate(evens.begin(), evens.end(), 0);
+        return accumulate(evens.begin(), evens.end(), 0);
         
     } else {
         return 0;
@@ -25,14 +27,14 @@ int main() {
     int in1 = 0;
     int in2 = 0;
 
-    std::cout << "Enter the first in the range: \n";
-    std::cin >> in1 ;
+    cout << "Enter the first in the range: \n";
+    cin >> in1 ;
 
-    std::cout << "Enter the second in the range: \n";
-    std::cin >> in2 ;
+    cout << "Enter the second in the range: \n";
+    cin >> in2 ;
     
     uint64_t result = calculate(in1, in2);
-    std::cout << "Result: \n" << result;
+    cout << "Result: \n" << result;
     
     return 0;
 }
