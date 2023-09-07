@@ -210,6 +210,11 @@ while (fibiter >= count)
     cout << endl << "Pi is: " << picalc(pi_input) << endl;
     cout << endl << "Compared to the built in pi function: " << M_PI << endl;
 
-    cout << endl << endl << "End of program";
+
+    char testarray[] = {'q','w','e','r','t','y'};
+
+    cout << testarray['6,7,3,6'] << endl;
+
+    cout << endl << "End of program";
     return 0;
 }
