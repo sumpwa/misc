@@ -11,14 +11,9 @@ int main() {
     char operation;
     float result = 0.0;
 
-    cout << "Enter the first number: " << '\n';
-    cin >> firstnumber;
-
-    cout << "Enter the operation (+ - * / ^)" << '\n';
-    cin >> operation;
-    
-    cout << "Enter the second number: " << '\n';
-    cin >> secondnumber;    
+    cout << "Enter the calculation you want to perform: " << '\n';
+    cin >> firstnumber >> operation >> secondnumber;
+ 
     switch (operation) {
     case '+':
         result = firstnumber + secondnumber;
