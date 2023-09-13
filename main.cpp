@@ -81,7 +81,7 @@ float Q_rsqrt(float number) {
 
     y = y * (threehalfs - (x2 * y * y));   // 2nd iteration
     cout << '\n' << '\n' << "2nd iteration of Newton's method on y: " << y;
-    cout << '\n' << "Note: The original algorithm had this commented out. I uncommented it to show Newton's method getting closer to the actual inverse square root with each iteration.";
+    cout << '\n' << "Note: The original algorithm had this commented out. I uncommented it to show Newton's method getting closer to the actual inverse square root with each iteration." << '\n';
 
     return y;
     
@@ -96,7 +96,7 @@ int main() {
 
     cout << "Enter a number to calculate the inverse square root: " << '\n' << '\n';
     cin >> number;
-    cin.get();
+    
 
     result = Q_rsqrt(number);
 
@@ -108,9 +108,7 @@ int main() {
     cout << setprecision(12);
     cout << "Compared to standard C inverse square root function: " << SquareRoot << '\n' << '\n';
 
-    cout << "What to do next..." << '\n';
-    cout << "Press Enter to continue..." << '\n';
-    cin.get();
+    
     int fibiter = 0;
     cout << '\n' << "Enter how many iterations of the fibonacci sequence to calculate: " << '\n';
     cin >> fibiter;
@@ -133,8 +131,8 @@ while (fibiter >= count)
     }
     count++;
 }
-    cout << '\n' << "Press Enter to continue..." << '\n';
-    cin.get();
+
+    
     cout << '\n' << "Now let's calculate Euler's number";
     int eulercount = 0;
     cout << '\n' << "Enter how many steps to perform:";
@@ -151,9 +149,9 @@ while (fibiter >= count)
     cout << fixed;
     cout << setprecision(12);
     cout << '\n' << "Euler's Number: " << euler;
-    cout << '\n' << "What to do next..." << '\n';
-    cout << '\n' << "Press Enter to continue..." << '\n';
-    cin.get();
+
+
+    
 
 
     cout << '\n' << "Leftpad Demonstration" << '\n';
@@ -164,19 +162,16 @@ while (fibiter >= count)
     string output = leftpad(LeftInput, desiredLength, paddingChar);
     cout << output << '\n';
 
-    cout << '\n' << "What to do next..." << '\n';
-    cout << '\n' << "Press Enter to continue..." << '\n';
-    cin.get();
+    
 
-    cout << "Let's play Fizzbuzz!" << '\n';
-    cout << '\n' << "Press Enter to continue..." << '\n';
-    cin.get();
-
-    int FIZZARG = 3;
-    int BUZZARG = 5;
+    int FIZZARG = 0;
+    int BUZZARG = 0;
     int fizzcount = 0;
     int buzzcount = 0;
     int fbcount = 0;
+
+    cout << "Enter values for Fizz and Buzz: " << '\n';
+    cin >> FIZZARG >> BUZZARG;
 
     for (int nFB = 1; nFB <= 100; nFB++){
         if((nFB%FIZZARG==0)&&(nFB%BUZZARG==0)){
@@ -197,11 +192,7 @@ while (fibiter >= count)
     cout << '\n' << "Buzz count: " << buzzcount;
     cout << '\n' << "Fizzbuzz count: " << fbcount;
   
-    cout << '\n' << "What to do next..." << '\n';
-    cout << '\n' << "Press Enter to continue..." << '\n';
-    cin.get();
 
-    cout << '\n' << "Let's calculate Pi with the Gauss-Legendere Algorithm..." << '\n';
     int pi_input = 0;
     cout << '\n' << "Pi is: " << picalc(pi_input) << '\n';
     cout << '\n' << "Compared to the built in pi function: " << M_PI << '\n';
