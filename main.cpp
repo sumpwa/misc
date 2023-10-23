@@ -155,30 +155,25 @@ while (fibiter >= count)
     cout << '\n' << "Press Enter to continue..." << '\n';
     cin.get();
 
-
-    cout << '\n' << "Leftpad Demonstration" << '\n';
-    string LeftInput = "hello";
-    int desiredLength = 10;
-    char paddingChar = '*';
-    
-    string output = leftpad(LeftInput, desiredLength, paddingChar);
-    cout << output << '\n';
-
-    cout << '\n' << "What to do next..." << '\n';
-    cout << '\n' << "Press Enter to continue..." << '\n';
-    cin.get();
-
     cout << "Let's play Fizzbuzz!" << '\n';
     cout << '\n' << "Press Enter to continue..." << '\n';
     cin.get();
 
-    int FIZZARG = 3;
-    int BUZZARG = 5;
+    int FIZZARG = 0;
+    int BUZZARG = 0;
     int fizzcount = 0;
     int buzzcount = 0;
     int fbcount = 0;
+    int FizzBuzzSteps = 0;
 
-    for (int nFB = 1; nFB <= 100; nFB++){
+    cout << "Enter the Fizz argument: ";
+    cin >> FIZZARG;
+    cout << '\n' << "Enter the Buzz argument: ";
+    cin >> BUZZARG;    
+    cout << '\n' << "Enter the amount of steps to perform: ";
+    cin >> FizzBuzzSteps;
+
+    for (int nFB = 1; nFB <= FizzBuzzSteps; nFB++){
         if((nFB%FIZZARG==0)&&(nFB%BUZZARG==0)){
             cout << nFB << " Fizzbuzz!" << '\n';
             fbcount++;
