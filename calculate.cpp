@@ -12,9 +12,9 @@ using std::cin;
 using std::accumulate;
 namespace rv = std::views;
 
-int calculate(int first, int last) {
+int calculate(int first, int last){
     if (last >= first){
-        auto even = [](auto e) { return e % 2 == 0; };
+        auto even = [](auto e){ return e % 2 == 0; };
         auto evens = rv::iota(first, last + 1)
                    | rv::filter(even);
         return accumulate(evens.begin(), evens.end(), 0);
@@ -24,7 +24,7 @@ int calculate(int first, int last) {
     }
 }
 
-int main() {
+int main(int argc, char *argv[]){
     int in1 = 0;
     int in2 = 0;
 

@@ -6,7 +6,7 @@
 #include <stdint.h>
 #include <math.h>
 
-float Q_rsqrt(float number) {
+float Q_rsqrt(float number){
 
     long i;
     float x2, y;
@@ -42,7 +42,7 @@ float Q_rsqrt(float number) {
     return y;
 }
 
-int main() {
+int main(int argc, char *argv[]){
     float result;
     float number;
 

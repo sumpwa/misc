@@ -17,7 +17,7 @@ double picalc(int pi_in){
     double pi_tnext = 0.0;
     double pi_pnext = 0.0;
     double pi_pie = 0.0;
-    while(pi_in<4) {
+    while(pi_in<4){
         
         pi_anext = (pi_a + pi_b) / 2.0;
         pi_bnext = sqrt(pi_a * pi_b);
@@ -134,7 +134,7 @@ string fizzbuzz(int fizzin, int buzzin){
     return "End of Fizzbuzz";
 }
 
-int main(){
+int main(int argc, char *argv[]){
     cout << "Hello World!" << '\n' << '\n';
 
     float result;

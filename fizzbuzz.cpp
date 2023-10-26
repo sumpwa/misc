@@ -10,7 +10,7 @@ Otherwise say your number
 using std::cout;
 using std::cin;
 
-int main(){
+int main(int argc, char *argv[]){
     int FIZZARG = 3;
     int BUZZARG = 5;
     int fizzcount = 0;

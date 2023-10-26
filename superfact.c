@@ -8,15 +8,15 @@
 #include "includes/factorial.h"
 
 
-int sf(int input) {
+int sf(int input){
         int sfsum = 1;
-        for (int sfcount = 1; sfcount <= input; sfcount++) {
+        for (int sfcount = 1; sfcount <= input; sfcount++){
             sfsum = sfsum * factorial(sfcount);
         }
         return sfsum;
 }
 
-int main() {
+int main(int argc, char *argv[]){
 int64_t number = 0;
 printf("Enter a number greater than 0: ");
 scanf("%d", &number);

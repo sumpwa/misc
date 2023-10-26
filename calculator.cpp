@@ -5,32 +5,32 @@
 #include <cmath>
 using std::cout, std::cin;
 
-int fact(int input) {
-    if (input == 0 || input == 1) {
+int fact(int input){
+    if (input == 0 || input == 1){
         return 1;
     } else {
         int output = 1;
-        for (int sum = 2; sum <= input; ++sum) {
+        for (int sum = 2; sum <= input; ++sum){
             output *= sum;
         }
         return output;
     }
 }
 
-int main() {
+int main(int argc, char *argv[]){
     float firstnumber = 0.0;
     float secondnumber = 0.0;
     char operation;
     float result = 0.0;
 
     cout << "Enter the calculation you want to perform: " << '\n';
-    if (operation = '!') {
+    if (operation = '!'){
         cin >> firstnumber >> operation;
     }
     else
     cin >> firstnumber >> operation >> secondnumber;
  
-    switch (operation) {
+    switch (operation){
     case '+':
         result = firstnumber + secondnumber;
         cout << firstnumber << " + " << secondnumber << " = " << result << '\n';
@@ -61,7 +61,7 @@ int main() {
         break;  
 
     case '!':
-        if(firstnumber<0) {
+        if(firstnumber<0){
             cout << "Error: Factorial cannot be used on negative numbers";
             return 1;
         }

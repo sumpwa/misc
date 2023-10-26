@@ -4,7 +4,7 @@ Calculating pi with the Gauss-Legendere Formula
 #include <stdio.h>
 #include <math.h>
 
-int main(){
+int main(int argc, char *argv[]){
 double a = 1.0;
 double b = 1.0 / sqrt(2);
 double t = 0.25;

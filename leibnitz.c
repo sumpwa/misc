@@ -4,7 +4,7 @@ Calculating pi with Leibniz's Formula
 #include <stdio.h>
 #include <math.h>
 
-int main(){
+int main(int argc, char *argv[]){
 double pie = 0.0;
 int n = 1;
 while(n<10000000){
