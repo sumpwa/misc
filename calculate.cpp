@@ -24,7 +24,7 @@ int calculate(int first, int last) {
     }
 }
 
-int main() {
+int main(int argc, char *argv[]) {
     int in1 = 0;
     int in2 = 0;
 

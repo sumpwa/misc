@@ -11,7 +11,7 @@ int ackermann(int m, int n) {
     }
 }
 
-int main() {
+int main(int argc, char *argv[]) {
     for (int m = 0; m <= 6; m++) {
         for (int n = 0; n <= 6; n++) {
         printf("Ackermann(%i, %i): %i\n", m, n, ackermann(m, n));

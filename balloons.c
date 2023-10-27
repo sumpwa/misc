@@ -26,7 +26,7 @@ int balloons(const int* arr, int n) {
 
 }
 
-int main() {
+int main(int argc, char *argv[]) {
 
     int arr1[]= { 5, 3, 4, 1, 2 };
     int arr2[]= { 5, 4, 3, 2, 1 };

@@ -6,7 +6,7 @@
 
 using std::cout, std::cin, std::string, std::fixed, std::setprecision;
 
-double picalc(int pi_in){
+double picalc(int pi_in) {
     double pie = 0.0;
     double pi_a = 1.0;
     double pi_b = 1.0 / sqrt(2);
@@ -34,7 +34,7 @@ double picalc(int pi_in){
     return pie;
 }
 
-float Q_rsqrt(float number){
+float Q_rsqrt(float number) {
 
     long i;
     float x2, y;
@@ -74,7 +74,7 @@ float Q_rsqrt(float number){
     
 }
 
-uint64_t fibonacci(int input){
+uint64_t fibonacci(int input) {
     int count = 1;
     uint64_t first = 0;
     uint64_t last = 0;
@@ -92,7 +92,7 @@ uint64_t fibonacci(int input){
     return fibo;
 }
 
-double euler(int input){
+double euler(int input) {
     int eulercount = 0;
     double eulerresult = 0.0;
     while( eulercount <= input ){
@@ -102,7 +102,7 @@ double euler(int input){
     return eulerresult;
 }
 
-string fizzbuzz(int fizzin, int buzzin){
+string fizzbuzz(int fizzin, int buzzin) {
 
     int fizzcount = 0;
     int buzzcount = 0;
@@ -134,7 +134,7 @@ string fizzbuzz(int fizzin, int buzzin){
     return "End of Fizzbuzz";
 }
 
-int main(){
+int main(int argc, char *argv[]) {
     cout << "Hello World!" << '\n' << '\n';
 
     float result;

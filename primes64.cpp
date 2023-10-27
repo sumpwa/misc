@@ -24,7 +24,7 @@ bool is_prime(u_int64_t n) {
     return true;
 }
 
-int main() {
+int main(int argc, char *argv[]) {
     u_int64_t num;
 
     std::cout << "Enter a 64-bit integer: ";

@@ -17,7 +17,7 @@ int fact(int input) {
     }
 }
 
-int main() {
+int main(int argc, char *argv[]) {
     float firstnumber = 0.0;
     float secondnumber = 0.0;
     char operation;

@@ -42,7 +42,7 @@ float Q_rsqrt(float number) {
     return y;
 }
 
-int main() {
+int main(int argc, char *argv[]) {
     float result;
     float number;
 

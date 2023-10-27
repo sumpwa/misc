@@ -2,7 +2,7 @@
 
 
 
-int main(){
+int main(int argc, char *argv[]) {
 int bills = 0;
 int pennies = 0;
 int nickels = 0;
