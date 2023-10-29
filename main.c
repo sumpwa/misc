@@ -22,7 +22,7 @@ float Q_rsqrt(float number) {
     y = number;
 
     i = * (long *) &y;              // Evil floating point bit level hacking
-    printf("\n\nInitial approximation: %d", i);
+    printf("\n\nInitial approximation: %ld", i);
     printf("\nThis is your number's floating point values as stored in memory, reinterpreted as an integer. Note that it has hex values to shorthand the binary code from memory.");
 
     i = 0x5f3759df - (i >> 1);      // Magic number for approximation
@@ -53,7 +53,7 @@ uint64_t fibonacci(int input) {
 
     while (count < input){
 
-        printf("%i ", fibo);
+        printf("%llu ", fibo);
         first = last;
         last = fibo;
         fibo = first + last;
@@ -141,18 +141,18 @@ int main(int argc, char *argv[]) {
 
     printf("Final result: %.15f\n", result);
     float SquareRoot = 1/sqrtf(number);
-    printf("Compared to standard C inverse square root function: %.15f", SquareRoot, "\n\n");
+    printf("Compared to standard C inverse square root function: %.15f\n\n", SquareRoot);
     
     int fibiter = 0;
     printf("\nEnter how many iterations of the fibonacci sequence to calculate: ");
-    scanf_s("%d", &fibiter);
-    printf("%d ", fibonacci(fibiter), "\n");
+    scanf_s("%llu", &fibiter);
+    printf("%llu \n", fibonacci(fibiter));
     
     printf("\n\nNow let's calculate Euler's number");
     int eulersteps = 0;
     printf("\nEnter how many steps to perform: ");
     scanf_s("%i", &eulersteps);
-    printf("Euler's Number: %.15lf", euler(eulersteps), "\n");
+    printf("Euler's Number: %.15lf\n", euler(eulersteps));
     printf("\nCompared to the built in e function: %.15lf\n", M_E);
 
     int pi_input = 0;
