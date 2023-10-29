@@ -10,18 +10,18 @@ This function takes two inputs, finds every even number, and adds them all toget
 using std::cout;
 using std::cin;
 using std::accumulate;
+
+
 namespace rv = std::views;
 
 int calculate(int first, int last) {
-    if (last >= first){
-        auto even = [](auto e) { return e % 2 == 0; };
-        auto evens = rv::iota(first, last + 1)
-                   | rv::filter(even);
-        return accumulate(evens.begin(), evens.end(), 0);
-        
-    } else {
+    if (last < first) {
         return 0;
     }
+    auto even = [](auto e) { return e % 2 == 0; };
+    auto evens = rv::iota(first, last + 1)
+                | rv::filter(even);
+    return accumulate(evens.begin(), evens.end(), 0); 
 }
 
 int main(int argc, char *argv[]) {

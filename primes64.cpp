@@ -1,8 +1,9 @@
 //Program to check if a 64 bit integer is a prime number.
 #include <iostream>
 #include <cmath>
+#include <cstdint>
 
-bool is_prime(u_int64_t n) {
+bool is_prime(uint64_t n) {
     if (n <= 1) {
         return false;
     }
@@ -15,7 +16,7 @@ bool is_prime(u_int64_t n) {
         return false;
     }
 
-    for (u_int64_t i = 5; i * i <= n; i += 6) {
+    for (uint64_t i = 5; i * i <= n; i += 6) {
         if (n % i == 0 || n % (i + 2) == 0) {
             return false;
         }
@@ -25,7 +26,7 @@ bool is_prime(u_int64_t n) {
 }
 
 int main(int argc, char *argv[]) {
-    u_int64_t num;
+    uint64_t num;
 
     std::cout << "Enter a 64-bit integer: ";
     std::cin >> num;

@@ -1,3 +1,5 @@
+//balloons.c
+//stupid balloons problem on 4chan
 #include <stdio.h>
 #include <stdlib.h>
 
@@ -31,9 +33,11 @@ int main(int argc, char *argv[]) {
     int arr1[]= { 5, 3, 4, 1, 2 };
     int arr2[]= { 5, 4, 3, 2, 1 };
     int arr3[]= { 1, 5, 3, 2, 4 };
+
     printf("arrows required: %d\n", balloons(arr1, 1 + sizeof(arr1) / sizeof(int)));
     printf("arrows required: %d\n", balloons(arr2, 1 + sizeof(arr2) / sizeof(int)));
     printf("arrows required: %d\n", balloons(arr3, 1 + sizeof(arr3) / sizeof(int)));
+
     return 0;
 
 }
