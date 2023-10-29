@@ -51,7 +51,7 @@ uint64_t fibonacci(int input) {
     uint64_t last = 0;
     uint64_t fibo = 1;
 
-    while (count < input){
+    while (count < input) {
 
         printf("%llu ", fibo);
         first = last;
@@ -66,7 +66,7 @@ uint64_t fibonacci(int input) {
 double euler(int input) {
     int eulercount = 0;
     double eulerresult = 0.0;
-    while( eulercount <= input ){
+    while( eulercount <= input ) {
         eulerresult = eulerresult + 1.0 / tgamma(eulercount);
         eulercount++;
     }
@@ -169,5 +169,6 @@ int main(int argc, char *argv[]) {
     fizzbuzz(aFizz, aBuzz);
 
     printf("\nEnd of program");
+    
     return 0;
 } 
