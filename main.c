@@ -1,10 +1,9 @@
-#define _USE_MATH_DEFINES
 #include <stdio.h>
 #include <stdint.h>
 #include <string.h>
 #include <math.h>
 
-
+#define _USE_MATH_DEFINES
 
 float Q_rsqrt(float number) {
 
