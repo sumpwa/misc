@@ -21,11 +21,11 @@ float Q_rsqrt(float number) {
     y = number;
 
     i = * (long *) &y;              // Evil floating point bit level hacking
-    printf("Initial approximation: %lx\n", i);
+    printf("Initial approximation: %d\n", i);
     printf("This is your number's floating point values as stored in memory, reinterpreted as an integer. Note that it has hex values to shorthand the binary code from memory. \n\n");
 
     i = 0x5f3759df - (i >> 1);      // Magic number for approximation
-    printf("Magic number: %lx\n", i);
+    printf("Magic number: %d\n", i);
     printf("The magic number is the difference between 0x5f375df and your number divided by 2 \n\n");
 
     y = * (float *) &i; // converts magic number back to a floating point number
