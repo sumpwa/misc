@@ -2,18 +2,21 @@
 #include <math.h>
 
 int main(int argc, char *argv[]) {
-    int a = 3-3*6+2;
-    printf("%d", a);
-    
 
+    int a = 3-3*6+2;
+    printf("stupid PEMDAS test: 3-3*6+2 = %d\n", a);
+    
     float b = 0.1;
     float c = 0.2;
     float d = b + c;
     if (d != 0.3) {
-        printf("\nI can't do math");
-        printf("\n%.20f", b);
-        printf("\n%.20f", c);
-        printf("\n%.20f", 0.1+0.2);
+        
+        printf("b = %.20f\n", b);
+        printf("c = %.20f\n", c);
+        printf("b + c = %.20f\n", 0.1+0.2);
+        printf("\nComputers can't do math. Press any key to quit.\n");
+        
     }
+    getchar();
     return 0;
 }

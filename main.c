@@ -102,6 +102,7 @@ void fizzbuzz(int fizzarg, int buzzarg) {
 }
 
 double picalc(int pi_in) {
+
     double pie = 0.0;
     double pi_a = 1.0;
     double pi_b = 1.0 / sqrt(2);
@@ -112,7 +113,8 @@ double picalc(int pi_in) {
     double pi_tnext = 0.0;
     double pi_pnext = 0.0;
     double pi_pie = 0.0;
-    while(pi_in<4) {
+
+    while(pi_in < 5) {
         
         pi_anext = (pi_a + pi_b) / 2.0;
         pi_bnext = sqrt(pi_a * pi_b);
@@ -125,7 +127,9 @@ double picalc(int pi_in) {
         pi_p = pi_pnext;
 
         pi_in++;
+        
         }
+
     return pie;
 }
 
@@ -157,7 +161,7 @@ int main(int argc, char *argv[]) {
 
     int pi_input = 0;
     
-    printf("\nCaclulating pi with the Gauss-Legendere Algorithm with 4 steps");
+    printf("\nCaclulating pi with the Gauss-Legendere Algorithm with 5 steps");
     printf("\nPi is: %.15lf", picalc(pi_input));
     printf("\nCompared to the built in pi function: %.15lf\n", M_PI);
 
@@ -167,8 +171,6 @@ int main(int argc, char *argv[]) {
     scanf_s("%d %d", &aFizz, &aBuzz);
     
     fizzbuzz(aFizz, aBuzz);
-
-    printf("\nEnd of program");
     
     return 0;
 } 
