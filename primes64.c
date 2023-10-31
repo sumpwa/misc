@@ -1,7 +1,8 @@
 //Program to check if a 64 bit integer is a prime number.
-#include <iostream>
-#include <cmath>
-#include <cstdint>
+#include <stdio.h>
+#include <stdint.h>
+#include <math.h>
+#include <stdbool.h>
 
 bool is_prime(uint64_t n) {
     if (n <= 1) {
@@ -28,16 +29,14 @@ bool is_prime(uint64_t n) {
 int main(int argc, char *argv[]) {
     uint64_t num;
 
-    std::cout << "Enter a 64-bit integer: ";
-    std::cin >> num;
+    printf("Enter a 64-bit integer: ");
+    scanf("%lld", &num);
 
     if (is_prime(num)) {
-        std::cout << num << " is a prime number." << std::endl;
+        printf("%lld is a prime number.", num);
     } else {
-        std::cout << num << " is not a prime number." << std::endl;
+        printf("%lld is not a prime number.", num);
     }
-
-
 
     return 0;
 }

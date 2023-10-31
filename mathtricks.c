@@ -1,7 +1,7 @@
 #include <stdio.h>
 #include <math.h>
 
-int main(int argc, char *argv[]) {
+int main() {
 
     int a = 3-3*6+2;
     printf("stupid PEMDAS test: 3-3*6+2 = %d\n", a);
