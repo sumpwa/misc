@@ -15,8 +15,8 @@ int main() {
         printf("c = %.20f\n", c);
         printf("b + c = %.20f\n", 0.1+0.2);
         printf("\nComputers can't do math. Press any key to quit.\n");
-        
+
+        while (getchar() != '\n'); // Clear the input buffer
     }
-    getchar();
     return 0;
 }

@@ -57,6 +57,9 @@ int main(int argc, char *argv[]) {
 
     printf("Your win rate is: %f\n", pctWins);
     printf("Conclusion: You should swap doors every time!\n");
+    
+    printf("End of program. Press any key to quit. \n");
+    while (getchar() != '\n'); // Clear the input buffer
 
     return 0;
 }

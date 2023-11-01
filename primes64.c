@@ -33,10 +33,14 @@ int main(int argc, char *argv[]) {
     scanf("%lld", &num);
 
     if (is_prime(num)) {
-        printf("%lld is a prime number.", num);
+        printf("%lld is a prime number.\n", num);
     } else {
-        printf("%lld is not a prime number.", num);
+        printf("%lld is not a prime number.\n", num);
     }
+
+    printf("End of program. Press any key to quit. \n");
+    while (getchar() != '\n'); // Clear the input buffer
+    getchar(); // Wait for key press
 
     return 0;
 }

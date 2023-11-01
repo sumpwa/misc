@@ -54,6 +54,9 @@ int main(int argc, char *argv[]) {
     printf("Final result: %f\n", result);
     float SquareRoot = 1/sqrtf(number);
     printf("Compared to standard C inverse square root function: %f\n", SquareRoot);
+    printf("End of program. Press any key to quit. \n");
+    while (getchar() != '\n'); // Clear the input buffer
+    getchar(); // Wait for key press
 
     return 0;
 }

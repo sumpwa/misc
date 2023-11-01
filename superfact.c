@@ -22,12 +22,15 @@ int64_t sf(int input) {
 }
 
 int main(int argc, char *argv[]) {
-int64_t number = 0;
-printf("Enter a number greater than 0: ");
-scanf_s("%d", &number);
-printf("Factorial: %d \n", factorial(number));
-printf("Superfactorial: %lld \n", sf(number));
-printf("End of program. \n");
-return 0;
+
+    int64_t number = 0;
+    printf("Enter a number greater than 0: ");
+    scanf_s("%d", &number);
+    printf("Factorial: %d \n", factorial(number));
+    printf("Superfactorial: %lld \n", sf(number));
+    printf("End of program. Press any key to quit. \n");
+    while (getchar() != '\n'); // Clear the input buffer
+    getchar(); // Wait for key press
+    return 0;
 
 }

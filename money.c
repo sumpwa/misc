@@ -41,8 +41,11 @@ float total = 0.0;
     }
 
     total = bills + quarters * 0.25 + dimes * 0.1 + nickels * 0.05 + pennies * 0.01;
-    printf("Your total is: $%.2f", total);
+    printf("Your total is: $%.2f\n", total);
 
+    printf("End of program. Press any key to quit. \n");
+    while (getchar() != '\n'); // Clear the input buffer
+    getchar(); // Wait for key press
 
     return 0;
 }

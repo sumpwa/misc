@@ -3,7 +3,7 @@
 #include <string.h>
 #include <math.h>
 
-#define _USE_MATH_DEFINES
+
 
 float Q_rsqrt(float number) {
 
@@ -133,8 +133,29 @@ double picalc(int pi_in) {
     return pie;
 }
 
+int evens (int first, int last) {
+    int sum = 0;
+    
+    if (first > last) {
+        return evens(last, first);
+    }
+
+    for (int i = first; i <= last; i++) {
+        if (i % 2 == 0) {
+            sum += i;
+        }
+    }
+
+    return sum;
+}
+
 int main(int argc, char *argv[]) {
     printf("Hello World!\n\n");
+
+    int a, b;
+    printf("Enter two whole numbers: ");
+    scanf("%d %d", &a, &b);
+    printf("The sum of all even numbers between %d and %d is %d.\n\n", a, b, evens(a, b));
 
     float result = 0.0;
     float number = 0.0;
@@ -158,10 +179,13 @@ int main(int argc, char *argv[]) {
     scanf_s("%i", &eulersteps);
     printf("Euler's Number: %.15lf\n", euler(eulersteps));
     printf("\nCompared to the built in e function: %.15lf\n", M_E);
+    printf("Press any key to continue. \n");
+    while (getchar() != '\n'); // Clear the input buffer
+    getchar(); // Wait for Enter key press
 
     int pi_input = 0;
     
-    printf("\nCaclulating pi with the Gauss-Legendere Algorithm with 5 steps");
+    printf("\nCalculating pi with the Gauss-Legendere Algorithm with 5 steps");
     printf("\nPi is: %.15lf", picalc(pi_input));
     printf("\nCompared to the built in pi function: %.15lf\n", M_PI);
 
@@ -171,6 +195,11 @@ int main(int argc, char *argv[]) {
     scanf_s("%d %d", &aFizz, &aBuzz);
     
     fizzbuzz(aFizz, aBuzz);
+
+    printf("End of program. Press any key to quit. \n");
+
+    while (getchar() != '\n'); // Clear the input buffer
+    getchar(); // Wait for Enter key press
     
     return 0;
 } 
