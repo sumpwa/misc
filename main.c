@@ -82,16 +82,16 @@ void fizzbuzz(int fizzarg, int buzzarg) {
     for (int steps = 1; steps <= 100; steps++) {
 
         if((steps % fizzarg==0) && (steps % buzzarg==0)) {
-            printf("Fizzbuzz!\n");
+            printf("Fizzbuzz! ");
             fbcount++;
         } else if(steps % buzzarg == 0) {
             buzzcount++;
-            printf("Buzz!\n");
+            printf("Buzz! ");
         } else if(steps % fizzarg == 0) {
             fizzcount++;
-            printf("Fizz!\n");
+            printf("Fizz! ");
         } else {
-            printf("%d\n", steps);
+            printf("%d ", steps);
         }
     }
 
@@ -152,52 +152,79 @@ int evens (int first, int last) {
 int main(int argc, char *argv[]) {
     printf("Hello World!\n\n");
 
-    int a, b;
-    printf("Enter two whole numbers: ");
-    scanf("%d %d", &a, &b);
-    printf("The sum of all even numbers between %d and %d is %d.\n\n", a, b, evens(a, b));
+    int option;
+    printf("Select an option or press any other key to quit.\n1.) Sum even numbers\n2.) Quake 3 Fast Inverse Square Root\n3.) Fibonacci Sequence\n4.) Estimate Euler's number\n5.) Estimate Pi\n6.) Play Fizzbuzz\n");
+    scanf("%d", &option);
+    switch(option) {
 
-    float result = 0.0;
-    float number = 0.0;
+    case 1:
+        int a, b;
+        
+        printf("Enter two whole numbers: ");
+        scanf("%d %d", &a, &b);
+        printf("The sum of all even numbers between %d and %d is %d.\n\n", a, b, evens(a, b));
+        
+        break;
 
-    printf("Enter a number to calculate the inverse square root: ");
-    scanf_s("%f", &number);
-    result = Q_rsqrt(number);
+    case 2:
+        float result = 0.0;
+        float number = 0.0;
 
-    printf("Final result: %.15f\n", result);
-    float SquareRoot = 1/sqrtf(number);
-    printf("Compared to standard C inverse square root function: %.15f\n\n", SquareRoot);
-    
-    int fibiter = 0;
-    printf("\nEnter how many iterations of the fibonacci sequence to calculate: ");
-    scanf_s("%llu", &fibiter);
-    printf("%llu \n", fibonacci(fibiter));
-    
-    printf("\n\nNow let's calculate Euler's number");
-    int eulersteps = 0;
-    printf("\nEnter how many steps to perform: ");
-    scanf_s("%i", &eulersteps);
-    printf("Euler's Number: %.15lf\n", euler(eulersteps));
-    printf("\nCompared to the built in e function: %.15lf\n", M_E);
-    printf("Press any key to continue. \n");
-    while (getchar() != '\n'); // Clear the input buffer
-    getchar(); // Wait for Enter key press
+        printf("Enter a number to calculate the inverse square root: ");
+        scanf_s("%f", &number);
+        result = Q_rsqrt(number);
+        printf("Final result: %.15f\n", result);
+        float SquareRoot = 1/sqrtf(number);
+        printf("Compared to standard C inverse square root function: %.15f\n\n", SquareRoot);
+        
+        break;
 
-    int pi_input = 0;
-    
-    printf("\nCalculating pi with the Gauss-Legendere Algorithm with 5 steps");
-    printf("\nPi is: %.15lf", picalc(pi_input));
-    printf("\nCompared to the built in pi function: %.15lf\n", M_PI);
+    case 3:
+        int fibiter = 0;
 
-    int aFizz = 0;
-    int aBuzz = 0;
-    printf("\nEnter values for Fizz and Buzz: ");
-    scanf_s("%d %d", &aFizz, &aBuzz);
-    
-    fizzbuzz(aFizz, aBuzz);
+        printf("\nEnter how many iterations of the fibonacci sequence to calculate: ");
+        scanf_s("%llu", &fibiter);
+        printf("%llu \n", fibonacci(fibiter));
+        
+        break;
+
+    case 4:
+        int eulersteps = 0;
+
+        printf("\n\nNow let's calculate Euler's number");
+        printf("\nEnter how many steps to perform: ");
+        scanf_s("%i", &eulersteps);
+        printf("Euler's Number: %.15lf\n", euler(eulersteps));
+        printf("\nCompared to the built in e function: %.15lf\n", M_E);
+        printf("Press any key to continue. \n");
+        while (getchar() != '\n'); // Clear the input buffer
+        getchar(); // Wait for Enter key press
+
+        break;
+ 
+    case 5:
+        int pi_input = 0;
+        
+        printf("\nCalculating pi with the Gauss-Legendere Algorithm with 5 steps");
+        printf("\nPi is: %.15lf", picalc(pi_input));
+        printf("\nCompared to the built in pi function: %.15lf\n", M_PI);
+        break;
+
+    case 6:
+        int aFizz = 0;
+        int aBuzz = 0;
+
+        printf("\nEnter values for Fizz and Buzz: ");
+        scanf_s("%d %d", &aFizz, &aBuzz);
+        fizzbuzz(aFizz, aBuzz);
+        
+        break;
+
+    default:
+
+    }
 
     printf("End of program. Press any key to quit. \n");
-
     while (getchar() != '\n'); // Clear the input buffer
     getchar(); // Wait for Enter key press
     
