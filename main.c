@@ -152,7 +152,7 @@ int evens (int first, int last) {
 int main(int argc, char *argv[]) {
     printf("Hello World!\n\n");
 
-    int option;
+    char option;
     printf("Select an option or press any other key to quit.\n1.) Sum even numbers\n2.) Quake 3 Fast Inverse Square Root\n3.) Fibonacci Sequence\n4.) Estimate Euler's number\n5.) Estimate Pi\n6.) Play Fizzbuzz\n");
     scanf("%d", &option);
     switch(option) {
@@ -220,13 +220,47 @@ int main(int argc, char *argv[]) {
         
         break;
 
+    case 9:
+
+        int totalrows = 10;
+        printf("\nHello, Melissa!\n");
+        printf("\nI made this tree for you\n");
+
+        for(int row = 1; row <= totalrows; row++) {
+
+            for(int spaces = totalrows - 1; spaces >= row; spaces--) {
+                printf(" ");
+            }
+
+            for(int stars = 1; stars <= 2*row-1; stars++) {
+                printf("*");
+            }
+
+
+            printf("\n");
+        }
+        for(int row = 1; row <= 2; row++) {
+
+            for(int spaces = totalrows - 1; spaces >= row; spaces--) {
+                printf(" ");
+            }
+
+            for(int stars = 1; stars <= 2*row-1; stars++) {
+                printf("T");
+            }
+
+
+            printf("\n");
+        }
     default:
 
     }
+
+
 
     printf("End of program. Press any key to quit. \n");
     while (getchar() != '\n'); // Clear the input buffer
     getchar(); // Wait for Enter key press
     
     return 0;
-} 
+}
