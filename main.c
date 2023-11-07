@@ -263,7 +263,7 @@ int main(int argc, char *argv[]) {
 
     case 9:
 
-        int totalrows = 10;
+        int totalrows = 8;
         printf("\nHello, Melissa!\n");
         printf("\nI made this tree for you\n");
 
@@ -280,23 +280,22 @@ int main(int argc, char *argv[]) {
 
             printf("\n");
         }
-        for(int row = 1; row <= 2; row++) {
+        for(int row = 1; row <= (totalrows / 4); row++) {
 
             for(int spaces = totalrows - 1; spaces >= row; spaces--) {
                 printf(" ");
             }
 
+
             for(int stars = 1; stars <= 2*row-1; stars++) {
                 printf("T");
             }
-
 
             printf("\n");
         }
     default:
 
     }
-
 
 
     printf("End of program. Press any key to quit. \n");
