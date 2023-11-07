@@ -2,7 +2,7 @@
 #include <stdint.h>
 #include <string.h>
 #include <math.h>
-
+#include <stdbool.h>
 
 
 float Q_rsqrt(float number) {
@@ -149,11 +149,40 @@ int evens (int first, int last) {
     return sum;
 }
 
+bool is_prime(int64_t primecheck) {
+
+    if (primecheck < 0) {
+        printf("\nNegative numbers are never prime.\n");
+        return false;
+    }
+
+    if (primecheck == 1) {
+        return false;
+    }
+
+        if (primecheck == 2 || primecheck == 3) {
+        return true;
+    }
+
+    if (primecheck % 2 == 0 || primecheck % 3 == 0)  {
+        return false;
+    }
+
+    for (int64_t primestart = 5; primestart * primestart <= primecheck; primestart += 6) {
+        if (primecheck % primestart == 0 || primecheck % (primestart + 2) == 0) {
+            return false;
+        }
+    }
+
+    return true;
+}
+
+
 int main(int argc, char *argv[]) {
     printf("Hello World!\n\n");
 
     char option;
-    printf("Select an option or press any other key to quit.\n1.) Sum even numbers\n2.) Quake 3 Fast Inverse Square Root\n3.) Fibonacci Sequence\n4.) Estimate Euler's number\n5.) Estimate Pi\n6.) Play Fizzbuzz\n");
+    printf("Select an option or press any other key to quit.\n1.) Sum even numbers\n2.) Quake 3 Fast Inverse Square Root\n3.) Fibonacci Sequence\n4.) Estimate Euler's number\n5.) Estimate Pi\n6.) Play Fizzbuzz\n7.) Prime Number Checker\n");
     scanf("%d", &option);
     switch(option) {
 
@@ -218,6 +247,18 @@ int main(int argc, char *argv[]) {
         scanf_s("%d %d", &aFizz, &aBuzz);
         fizzbuzz(aFizz, aBuzz);
         
+        break;
+
+    //run the prime number checker function
+    case 7:
+        int64_t primeinput = 0;
+        printf("\nEnter a number to check if it is prime: ");
+        scanf_s("%lld", &primeinput);
+        if (is_prime(primeinput) == true) {
+            printf("\n%lld is prime\n", primeinput);
+        } else {
+            printf("\n%lld is not prime\n", primeinput);
+        }
         break;
 
     case 9:
